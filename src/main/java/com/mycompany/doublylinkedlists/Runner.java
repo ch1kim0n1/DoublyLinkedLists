@@ -12,23 +12,24 @@ class Runner {
     public static void main(String[] args) {
         VLinkedList list = new VLinkedList();
         list.add(1);
+        list.add(6);
         list.add(2);
+        list.add(7);
         list.add(3);
         list.add(4);
         list.add(5);
-        System.out.print("List before deleting odd: ");
-        printList(list);
+        
         list.deleteOdd();
-        System.out.print("List after deleting odd: ");
         printList(list);
     }
 
     public static void printList(VLinkedList list) {
         VNode current = list.head;
+        System.out.print("[ ");
         while (current != null) {
             System.out.print(current.getValue() + " ");
             current = current.getNext();
         }
-        System.out.println();
+        System.out.print("]");
     }
 }
